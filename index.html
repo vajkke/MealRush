@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealRush - Feel the best taste</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <img src="../img/businessName.png" class="logo" />
+      <div class="right-side">
+        <h3 class="about">About Project</h3>
+
+        <a
+          class="github-button"
+          href="https://github.com/vajkke/Foqused"
+          data-icon="octicon-star"
+          data-size="large"
+          aria-label="Star vajkke/Foqused on GitHub"
+          >Star</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <nav class="navbar">
+        <input type="text" class="search-bar" placeholder="Search Recipe" />
+        <p class="recipe-matched-text">
+          We've found <span class="recipe-matched-number">213</span>
+          recipes
+        </p>
+        <select name="sorter" class="sort">
+          <option value="low-to-high--calories">Calories: Low to High</option>
+          <option value="high-to-low--calories">Calories: High to Low</option>
+          <option value="low-to-high--protein">Protein: Low to High</option>
+          <option value="high-to-low--protein">Protein: High to Low</option>
+          <option value="low-to-high--carbs">Carbs: Low to High</option>
+          <option value="high-to-low--carbs">Carbs: High to Low</option>
+        </select>
+      </nav>
+      <nav class="sidebar">
+        <div class="meal-type--container">
+          <h3 class="type--heading">Meal Type</h3>
+          <p class="no-pref--option">💯 No Preference</p>
+          <div class="type--options">
+            <ul class="left-side--options">
+              <li>🍳 Breakfast</li>
+              <li>🥘 Lunch</li>
+              <li>🍚 Dinner</li>
+              <li>🍿 Snack</li>
+            </ul>
+            <ul class="right-side--options">
+              <li>🍰 Dessert</li>
+              <li>🍲 Appetizer</li>
+              <li>🥗 Salad</li>
+              <li>🥛 Smoothie</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="diet-type--container">
+          <h3 class="type--heading">Diet Type</h3>
+          <p class="no-pref--option">💯 No Preference</p>
+          <div class="type--options">
+            <ul class="left-side--options">
+              <li>🥝 Vegetarian</li>
+              <li>🆓 Gluten Free</li>
+              <li>🐟 Pescetarian</li>
+            </ul>
+            <ul class="right-side--options">
+              <li>🥗 Vegan</li>
+              <li>🔥 Keto</li>
+              <li>🥚 Paleo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="nutrition--container">
+          <h3 class="nutrition--heading">Nutrition</h3>
+          <div class="calories--container"></div>
+          <div class="protein--container">
+            <p class="protein-heading">Protein</p>
+            <div class="value-display">
+              <p><span class="protein--min-value">25</span>g</p>
+              <div class="separator">-</div>
+              <p><span class="protein--max-value">75</span>g</p>
+            </div>
+
+            <div class="slider">
+              <div class="progress"></div>
+            </div>
+            <div class="range-input">
+              <input
+                type="range"
+                class="range-min"
+                min="0"
+                max="100"
+                value="25"
+                step="1"
+              />
+              <input
+                type="range"
+                class="range-max"
+                min="0"
+                max="100"
+                value="75"
+                step="1"
+              />
+            </div>
+          </div>
+          <div class="carbs--container"></div>
+          <div class="fat--container"></div>
+        </div>
+      </nav>
+      <section class="recipe-display">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
+      </section>
+    </main>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
