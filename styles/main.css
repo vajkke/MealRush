@@ -127,11 +127,14 @@ option{
 .sidebar{
     grid-area: sidebar;
     border: 1px solid #000;
+    border-left: none;
     border-top: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    padding-bottom: 3rem;
 }
+
 
 
 /* MEAL TYPE */
@@ -153,8 +156,6 @@ option{
     margin-top: 2rem;
     cursor: pointer;
 }
-
-
 
 .type--options{
     display: flex;
@@ -185,31 +186,33 @@ ul>li{
 /* DIET TYPE */
 
 .diet-type--container{
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
-
-
-
-
 
 
 /* NUTRITION */
 
 .nutrition--container{
-    width: 100%;
+    padding-top: 2rem ;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.nutrition-main-heading{
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    width: 95%;
+}
 
-.protein--container{
+.container{
     width: 80%;
 }
 
-
-.protein-heading{
+.nutrition-heading{
     text-align: center;
     margin: 1rem 0;
 }
@@ -225,6 +228,7 @@ ul>li{
   font-size: 1rem;
   margin: 0 0.5rem;
 }
+
 
 .slider{
   height: 5px;
@@ -246,7 +250,6 @@ ul>li{
   position: relative;
 }
 
-
 .range-input input{
   position: absolute;
   width: 100%;
@@ -256,6 +259,7 @@ ul>li{
   pointer-events: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
 }
 
 input[type="range"]::-webkit-slider-thumb{
@@ -265,6 +269,7 @@ input[type="range"]::-webkit-slider-thumb{
   background: #A8DADC;
   pointer-events: auto;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb{
@@ -275,6 +280,7 @@ input[type="range"]::-moz-range-thumb{
   background: #A8DADC;
   pointer-events: auto;
   -moz-appearance: none;
+  cursor: pointer;
 }
 
 

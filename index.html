@@ -13,7 +13,6 @@
       <img src="../img/businessName.png" class="logo" />
       <div class="right-side">
         <h3 class="about">About Project</h3>
-
         <a
           class="github-button"
           href="https://github.com/vajkke/Foqused"
@@ -78,23 +77,52 @@
           </div>
         </div>
         <div class="nutrition--container">
-          <h3 class="nutrition--heading">Nutrition</h3>
-          <div class="calories--container"></div>
-          <div class="protein--container">
-            <p class="protein-heading">Protein</p>
+          <h3 class="nutrition-main-heading">Nutrition</h3>
+
+          <div class="calories--container container">
+            <p class="nutrition-heading">Calories</p>
+            <div class="value-display">
+              <p><span class="calories--min-value">250</span>kcal</p>
+              <div class="separator">-</div>
+              <p><span class="calories--max-value">750</span>kcal</p>
+            </div>
+            <div class="calories--slider slider">
+              <div class="calories--progress progress"></div>
+            </div>
+            <div class="calories-range range-input">
+              <input
+                type="range"
+                class="calories--range-min"
+                min="0"
+                max="1000"
+                value="250"
+                step="10"
+              />
+              <input
+                type="range"
+                class="calories--range-max"
+                min="0"
+                max="1000"
+                value="750"
+                step="10"
+              />
+            </div>
+          </div>
+
+          <div class="protein--container container">
+            <p class="nutrition-heading">Protein</p>
             <div class="value-display">
               <p><span class="protein--min-value">25</span>g</p>
               <div class="separator">-</div>
               <p><span class="protein--max-value">75</span>g</p>
             </div>
-
-            <div class="slider">
-              <div class="progress"></div>
+            <div class="protein--slider slider">
+              <div class="protein--progress progress"></div>
             </div>
-            <div class="range-input">
+            <div class="protein-range range-input">
               <input
                 type="range"
-                class="range-min"
+                class="protein--range-min"
                 min="0"
                 max="100"
                 value="25"
@@ -102,7 +130,7 @@
               />
               <input
                 type="range"
-                class="range-max"
+                class="protein--range-max"
                 min="0"
                 max="100"
                 value="75"
@@ -110,8 +138,66 @@
               />
             </div>
           </div>
-          <div class="carbs--container"></div>
-          <div class="fat--container"></div>
+
+          <div class="carbs--container container">
+            <p class="nutrition-heading">Carbs</p>
+            <div class="value-display">
+              <p><span class="carbs--min-value">25</span>g</p>
+              <div class="separator">-</div>
+              <p><span class="carbs--max-value">75</span>g</p>
+            </div>
+            <div class="carbs--slider slider">
+              <div class="carbs--progress progress"></div>
+            </div>
+            <div class="carbs-range range-input">
+              <input
+                type="range"
+                class="carbs--range-min"
+                min="0"
+                max="100"
+                value="25"
+                step="1"
+              />
+              <input
+                type="range"
+                class="carbs--range-max"
+                min="0"
+                max="100"
+                value="75"
+                step="1"
+              />
+            </div>
+          </div>
+          <div class="fat--container container">
+            <p class="nutrition-heading">Fats</p>
+            <div class="value-display">
+              <p><span class="fat--min-value">25</span>g</p>
+              <div class="separator">-</div>
+              <p><span class="fat--max-value">75</span>g</p>
+            </div>
+            <div class="fat--slider slider">
+              <div class="fat--progress progress"></div>
+            </div>
+            <div class="fat-range range-input">
+              <input
+                type="range"
+                class="fat--range-min"
+                min="0"
+                max="100"
+                value="25"
+                step="1"
+              />
+              <input
+                type="range"
+                class="fat--range-max"
+                min="0"
+                max="100"
+                value="75"
+                step="1"
+              />
+            </div>
+          </div>
+          </div>
         </div>
       </nav>
       <section class="recipe-display">
