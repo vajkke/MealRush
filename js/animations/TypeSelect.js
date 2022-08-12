@@ -10,6 +10,8 @@ const TypeSelect = () => {
   const activeEffect = `background: #A8DADC; color: #F7F7F7; transition: 300ms;`;
   const deactiveEffect = `background: transparent; color: #000; transition: 300ms;`;
 
+  // MEAL TYPE
+
   mealOptionsArray.forEach(option => {
     option.addEventListener('click', () => {
       if (option.getAttribute('data-active') === 'no') {
@@ -55,6 +57,8 @@ const TypeSelect = () => {
       });
     }
   });
+
+  // DIET TYPE
 
   dietOptionsArray.forEach(option => {
     option.addEventListener('click', () => {

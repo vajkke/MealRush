@@ -43,7 +43,7 @@
       <nav class="sidebar">
         <div class="meal-type--container">
           <h3 class="type--heading">Meal Type</h3>
-          <p class="meal-noPref--option option">💯 No Preference</p>
+          <p data-active="no" class="meal-noPref--option option">💯 No Preference</p>
           <div class="type--options">
             <ul class="left-side--options">
               <li data-active="no" class="meal-option option">🍳 Breakfast</li>
@@ -62,7 +62,7 @@
 
         <div class="diet-type--container">
           <h3 class="type--heading">Diet Type</h3>
-          <p class="diet-noPref--option option">💯 No Preference</p>
+          <p data-active="no" class="diet-noPref--option option">💯 No Preference</p>
           <div class="type--options">
             <ul class="left-side--options">
               <li data-active="no" class="diet-option option">🥝 Vegetarian</li>
@@ -200,11 +200,441 @@
           </div>
         </div>
       </nav>
-      <section class="recipe-display">
-        <img src="https://picsum.photos/seed/picsum/360/450" alt="" />
-      </section>
-    </main>
 
+
+      <section class="recipe-display">
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+        <div class="recipe-container">
+          <div class="top-side">
+          <img src="./img/dummyImage.jpg" class="recipe-image">
+          <div class="right-top-side">
+          <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
+          <h3 class="recipe--meal-types">
+            <span class="first-recipe--meal-type recipe--meal-type">Lunch</span>
+            /
+            <span class="second-recipe--meal-type recipe--meal-type">Dinner</span>
+          </h3>
+          <h3 class="recipe--diet-types">
+            <span class="first-recipe--diet-type recipe--diet-type">Keto</span>
+            /
+            <span class="second-recipe--diet-type recipe--diet-type">Paleo</span>
+          </h3>
+        </div>
+        </div>
+        <div class="bottom-side">
+          <div class="left-bottom-side">
+            <h2 class="ingredients-heading">Ingredients</h2>
+          <ul class="ingredients-list">
+            
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Eggs</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">3</span>
+              <span class="ingredients-name">Bacon Slices</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">200g</span>
+              <span class="ingredients-name">Chopped Romaine Lettuce</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">280g</span>
+              <span class="ingredients-name">Diced Cooked Chicken</span>
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-value">150g</span>
+              <span class="ingredients-name">Fresh Cherry Tomatoes Halved</span>
+            </li>
+          </ul>
+        </div>
+        <div class="right-bottom-side">
+          <h2 class="recipe-nutrition-heading">Nutrition</h2>
+          <ul class="nutritions-list">
+            <li class="nutrition">
+              <span class="calories">Calories: </span>
+              <span class="calories-value nutrition-value">521 kcal</span>
+            </li>
+            <li class="nutrition">
+              <span class="protein">Protein: </span>
+              <span class="protein-value nutrition-value">27g</span>
+            </li>
+            <li class="nutrition">
+              <span class="carbs">Carbs: </span>
+              <span class="carbs-value nutrition-value">8g</span>
+            </li>
+            <li class="nutrition">
+              <span class="fat">Fat: </span>
+              <span class="fat-value nutrition-value">42g</span>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="button">
+          <p class="answer-choice">Full Recipe</p>
+        </div>
+        </div>
+
+
+      </section>
+      
+      <div class="buttons">
+        <button class="previous--button">Previous</button>
+        <button class="next--button">Next</button>
+      </div>
+    </main>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
