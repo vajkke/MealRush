@@ -8,6 +8,8 @@ const dietTypeMobileBtn = document.querySelector('.dietType-mobile-menu ');
 const mealTypeMobileBtn = document.querySelector('.mealType-mobile-menu ');
 const mobileMenuDisplay = document.querySelector('.mobile-menu--display');
 
+// HTML CONTENT
+
 const nutritionHTML = `
 <div class="nutrition--container">
 <h3 class="nutrition-main-heading">Nutrition</h3>
@@ -186,13 +188,18 @@ const mealTypeHTML = `
 </div>
 `;
 
+// EFFECTS
+
 const mobileIconActiveStyle = `opacity: 0.75; box-shadow: 5px 0px 10px 0px #aaa;`;
 const mobileIconDeactiveStyle = `opacity: ''; box-shadow: ''`;
+const overlay = document.querySelector('.overlay');
+
 let activeMobileIconNutrition = false;
 let activeMobileIconMeal = false;
 let activeMobileIconDiet = false;
 
 const nutritionActive = () => {
+  overlay.classList.remove('hidden');
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   nutritionMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -204,6 +211,7 @@ const nutritionActive = () => {
 };
 
 const dietTypeActive = () => {
+  overlay.classList.remove('hidden');
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -215,6 +223,7 @@ const dietTypeActive = () => {
 };
 
 const mealTypeActive = () => {
+  overlay.classList.remove('hidden');
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -226,6 +235,7 @@ const mealTypeActive = () => {
 };
 
 const mobileDisplayDeactive = () => {
+  overlay.classList.add('hidden');
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
@@ -260,6 +270,10 @@ const MobileFunctions = () => {
       mobileDisplayDeactive();
       activeMobileIconMeal = false;
     }
+  });
+
+  overlay.addEventListener('click', () => {
+    mobileDisplayDeactive();
   });
 };
 

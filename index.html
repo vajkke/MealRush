@@ -32,6 +32,7 @@
           recipes
         </p>
         <select name="sorter" class="sort">
+          <option>Sort</option>
           <option value="low-to-high--calories">Calories: Low to High</option>
           <option value="high-to-low--calories">Calories: High to Low</option>
           <option value="low-to-high--protein">Protein: Low to High</option>
@@ -41,8 +42,8 @@
           <option value="low-to-high--fat">Fat: Low to High</option>
           <option value="high-to-low--fat">Fat: High to Low</option>
         </select>
+        <button class="mobile-sort">Sort</button>
       </nav>
-
       <div class="sidebar-and-display">
         <nav class="sidebar"></nav>
 
@@ -124,24 +125,25 @@
           </div>
         </section>
       </div>
-      <div class="whole--mobile-menu hidden">
-        <div class="mobile-menu--display"></div>
-        <div class="mobile-menu">
-          <div class="nutrition-mobile-menu  mobile-menu--type">
-            <img src="./img/nutrition-img.svg" class="logo-mobile-menu"></img>
-            <p class="heading-mobile-menu">Nutrition</p>
-          </div>
-          <div class="dietType-mobile-menu mobile-menu--type">
-            <img src="./img/diet-type.svg" class="logo-mobile-menu"></img>
-            <p class="heading-mobile-menu">Diet Type</p>
-          </div>
-          <div class="mealType-mobile-menu mobile-menu--type">
-            <img src="./img/meal-type.svg" class="logo-mobile-menu"></img>
-            <p class="heading-mobile-menu">Meal Type</p>
-          </div>
+    </main>
+    <div class="whole--mobile-menu hidden">
+      <div class="mobile-menu--display"></div>
+      <div class="mobile-menu">
+        <div class="nutrition-mobile-menu  mobile-menu--type">
+          <img src="./img/nutrition-img.svg" class="logo-mobile-menu"></img>
+          <p class="heading-mobile-menu">Nutrition</p>
+        </div>
+        <div class="dietType-mobile-menu mobile-menu--type">
+          <img src="./img/diet-type.svg" class="logo-mobile-menu"></img>
+          <p class="heading-mobile-menu">Diet Type</p>
+        </div>
+        <div class="mealType-mobile-menu mobile-menu--type">
+          <img src="./img/meal-type.svg" class="logo-mobile-menu"></img>
+          <p class="heading-mobile-menu">Meal Type</p>
         </div>
       </div>
-    </main>
+    </div>
+    <div class="overlay hidden"></div>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
