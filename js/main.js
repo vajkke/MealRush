@@ -1,5 +1,18 @@
-import Slider from './sliders/Slider.js';
-import TypeSelect from './animations/TypeSelect.js';
+import DesktopSidebar from './App/Sidebar/DesktopSidebar.js';
+import MobileSidebar from './App/Sidebar/MobileSidebar.js';
 
-Slider();
-TypeSelect();
+window.addEventListener('load', () => {
+  if (window.innerWidth <= 890) {
+    MobileSidebar();
+  } else if (window.innerWidth > 890) {
+    DesktopSidebar();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 890) {
+    MobileSidebar();
+  } else if (window.innerWidth > 890) {
+    DesktopSidebar();
+  }
+});

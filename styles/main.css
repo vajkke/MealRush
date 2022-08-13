@@ -11,6 +11,10 @@ body {
   background-color: #f7f7f7;
 }
 
+main {
+  position: relative;
+}
+
 /* HEADER */
 
 .main-header {
@@ -59,16 +63,8 @@ body {
 main {
   width: 100%;
   min-height: 100vh;
-  display: grid;
-  grid-template-areas:
-    'navbar navbar navbar'
-    'sidebar display display'
-    'sidebar display display'
-    '. display display'
-    '. display display';
-
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAVBAR */
@@ -77,13 +73,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  grid-area: navbar;
   padding: 2rem 0;
+  position: relative;
 }
 
 .search-bar {
   margin-left: 0.5rem;
-  width: 20%;
+  width: 70%;
   max-width: 20rem;
   font-size: 1.2rem;
   border: none;
@@ -115,10 +111,41 @@ main {
   border-radius: 12px;
 }
 
+@media (max-width: 1000px) {
+  .recipe-matched-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .recipe-matched-text {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .search-bar {
+    margin-bottom: 1rem;
+  }
+  .sort {
+    margin: 0;
+  }
+}
+
 /* SIDEBAR */
 
+.sidebar-and-display {
+  display: flex;
+}
+
 .sidebar {
-  grid-area: sidebar;
+  /* grid-area: sidebar; */
+  width: 20%;
+  padding: 0 1rem;
   border: 1px solid #000;
   border-left: none;
   border-top: none;
@@ -173,9 +200,9 @@ ul {
 
 .option {
   margin-top: 1.2rem;
-  font-size: 18px;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 0.6rem 0.3rem;
   border-radius: 11px;
 }
 
@@ -208,7 +235,7 @@ ul {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
 }
 
 .nutrition-heading {
@@ -285,10 +312,11 @@ input[type='range']::-moz-range-thumb {
 
 .recipe-display {
   padding: 2rem 0;
-  grid-area: display;
+  /* grid-area: display; */
+  width: 80%;
   border-top: 1px solid #000;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -306,6 +334,7 @@ input[type='range']::-moz-range-thumb {
   align-items: center;
   position: relative;
   border-radius: 11px;
+  display: none;
 }
 
 .recipe-container:hover {
@@ -445,4 +474,129 @@ input[type='range']::-moz-range-thumb {
 
 .button:active {
   border-bottom: 2px solid #1d3557;
+}
+
+.whole--mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .sidebar {
+    width: 25%;
+  }
+  .recipe-display {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sidebar {
+    width: 30%;
+  }
+  .recipe-display {
+    width: 70%;
+  }
+}
+
+@media (max-width: 930px) {
+  .option {
+    font-size: 1rem;
+  }
+  .left-side--options {
+    margin-right: 0.7rem;
+  }
+  .right-side--options {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .sidebar {
+    display: none;
+  }
+  .recipe-display {
+    width: 100%;
+  }
+
+  .whole--mobile-menu {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid #000; */
+    color: #ffff;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    border-radius: 15px;
+  }
+
+  .mobile-menu--type {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
+
+  .mobile-menu--type:hover,
+  .mobile-menu--type:active {
+    opacity: 0.75;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .heading-mobile-menu {
+    font-size: 0.8rem;
+    color: #1d3557;
+  }
+
+  .mobile-menu--display {
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nutrition--container {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .nutrition-main-heading {
+    border: none;
+  }
+
+  .nutrition-heading {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .diet-type--container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .meal-type--container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .type--heading {
+    border: none;
+  }
 }

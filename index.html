@@ -43,251 +43,103 @@
         </select>
       </nav>
 
-      <nav class="sidebar">
-        <div class="nutrition--container">
-          <h3 class="nutrition-main-heading">Nutrition</h3>
+      <div class="sidebar-and-display">
+        <nav class="sidebar"></nav>
 
-          <div class="calories--container container">
-            <p class="nutrition-heading">Calories</p>
-            <div class="value-display">
-              <p><span class="calories--min-value">0</span>kcal</p>
-              <div class="separator">-</div>
-              <p><span class="calories--max-value">1000</span>kcal</p>
-            </div>
-            <div class="calories--slider slider">
-              <div class="calories--progress progress"></div>
-            </div>
-            <div class="calories-range range-input">
-              <input
-                type="range"
-                class="calories--range-min"
-                min="0"
-                max="1000"
-                value="0"
-                step="10"
-              />
-              <input
-                type="range"
-                class="calories--range-max"
-                min="0"
-                max="1000"
-                value="1000"
-                step="10"
-              />
-            </div>
-          </div>
-
-          <div class="protein--container container">
-            <p class="nutrition-heading">Protein</p>
-            <div class="value-display">
-              <p><span class="protein--min-value">0</span>g</p>
-              <div class="separator">-</div>
-              <p><span class="protein--max-value">100</span>g</p>
-            </div>
-            <div class="protein--slider slider">
-              <div class="protein--progress progress"></div>
-            </div>
-            <div class="protein-range range-input">
-              <input
-                type="range"
-                class="protein--range-min"
-                min="0"
-                max="100"
-                value="0"
-                step="1"
-              />
-              <input
-                type="range"
-                class="protein--range-max"
-                min="0"
-                max="100"
-                value="100"
-                step="1"
-              />
-            </div>
-          </div>
-
-          <div class="carbs--container container">
-            <p class="nutrition-heading">Carbs</p>
-            <div class="value-display">
-              <p><span class="carbs--min-value">0</span>g</p>
-              <div class="separator">-</div>
-              <p><span class="carbs--max-value">100</span>g</p>
-            </div>
-            <div class="carbs--slider slider">
-              <div class="carbs--progress progress"></div>
-            </div>
-            <div class="carbs-range range-input">
-              <input
-                type="range"
-                class="carbs--range-min"
-                min="0"
-                max="100"
-                value="0"
-                step="1"
-              />
-              <input
-                type="range"
-                class="carbs--range-max"
-                min="0"
-                max="100"
-                value="100"
-                step="1"
-              />
-            </div>
-          </div>
-          <div class="fat--container container">
-            <p class="nutrition-heading">Fats</p>
-            <div class="value-display">
-              <p><span class="fat--min-value">0</span>g</p>
-              <div class="separator">-</div>
-              <p><span class="fat--max-value">100</span>g</p>
-            </div>
-            <div class="fat--slider slider">
-              <div class="fat--progress progress"></div>
-            </div>
-            <div class="fat-range range-input">
-              <input
-                type="range"
-                class="fat--range-min"
-                min="0"
-                max="100"
-                value="0"
-                step="1"
-              />
-              <input
-                type="range"
-                class="fat--range-max"
-                min="0"
-                max="100"
-                value="100"
-                step="1"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="diet-type--container">
-          <h3 class="type--heading">Diet Type</h3>
-          <p data-active="no" class="diet-noPref--option option">
-            💯 No Preference
-          </p>
-          <div class="type--options">
-            <ul class="left-side--options">
-              <li data-active="no" class="diet-option option">🥝 Vegetarian</li>
-              <li data-active="no" class="diet-option option">
-                🆓 Gluten Free
-              </li>
-              <li data-active="no" class="diet-option option">
-                🐟 Pescetarian
-              </li>
-            </ul>
-            <ul class="right-side--options">
-              <li data-active="no" class="diet-option option">🥗 Vegan</li>
-              <li data-active="no" class="diet-option option">🔥 Keto</li>
-              <li data-active="no" class="diet-option option">🥚 Paleo</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="meal-type--container">
-          <h3 class="type--heading">Meal Type</h3>
-          <p data-active="no" class="meal-noPref--option option">
-            💯 No Preference
-          </p>
-          <div class="type--options">
-            <ul class="left-side--options">
-              <li data-active="no" class="meal-option option">🍳 Breakfast</li>
-              <li data-active="no" class="meal-option option">🥘 Lunch</li>
-              <li data-active="no" class="meal-option option">🍚 Dinner</li>
-              <li data-active="no" class="meal-option option">🍿 Snack</li>
-            </ul>
-            <ul class="right-side--options">
-              <li data-active="no" class="meal-option option">🍰 Dessert</li>
-              <li data-active="no" class="meal-option option">🍲 Appetizer</li>
-              <li data-active="no" class="meal-option option">🥗 Salad</li>
-              <li data-active="no" class="meal-option option">🥛 Smoothie</li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <section class="recipe-display">
-        <div class="recipe-container">
-          <div class="top-side">
-            <img src="./img/dummyImage.jpg" class="recipe-image" />
-            <div class="right-top-side">
-              <h2 class="recipe-heading">Keto Chicken Bacon Ranch Casserole</h2>
-              <h3 class="recipe--diet-types">
-                <span class="first-recipe--diet-type recipe--diet-type"
-                  >Keto</span
-                >
-                /
-                <span class="second-recipe--diet-type recipe--diet-type"
-                  >Paleo</span
-                >
-              </h3>
-            </div>
-          </div>
-
-          <div class="bottom-side">
-            <div class="left-bottom-side">
-              <h2 class="ingredients-heading">Ingredients</h2>
-              <ul class="ingredients-list">
-                <li class="ingredient">
-                  <span class="ingredient-value">3</span>
-                  <span class="ingredients-name">Eggs</span>
-                </li>
-                <li class="ingredient">
-                  <span class="ingredient-value">3</span>
-                  <span class="ingredients-name">Bacon Slices</span>
-                </li>
-                <li class="ingredient">
-                  <span class="ingredient-value">200g</span>
-                  <span class="ingredients-name">Chopped Romaine Lettuce</span>
-                </li>
-                <li class="ingredient">
-                  <span class="ingredient-value">280g</span>
-                  <span class="ingredients-name">Diced Cooked Chicken</span>
-                </li>
-                <li class="ingredient">
-                  <span class="ingredient-value">150g</span>
-                  <span class="ingredients-name"
-                    >Fresh Cherry Tomatoes Halved</span
+        <section class="recipe-display">
+          <div class="recipe-container">
+            <div class="top-side">
+              <img src="./img/dummyImage.jpg" class="recipe-image" />
+              <div class="right-top-side">
+                <h2 class="recipe-heading">
+                  Keto Chicken Bacon Ranch Casserole
+                </h2>
+                <h3 class="recipe--diet-types">
+                  <span class="first-recipe--diet-type recipe--diet-type"
+                    >Keto</span
                   >
-                </li>
-              </ul>
+                  /
+                  <span class="second-recipe--diet-type recipe--diet-type"
+                    >Paleo</span
+                  >
+                </h3>
+              </div>
             </div>
-            <div class="right-bottom-side">
-              <h2 class="recipe-nutrition-heading">Nutrition</h2>
-              <ul class="nutritions-list">
-                <li class="nutrition">
-                  <span class="calories">Calories: </span>
-                  <span class="calories-value nutrition-value">521 kcal</span>
-                </li>
-                <li class="nutrition">
-                  <span class="protein">Protein: </span>
-                  <span class="protein-value nutrition-value">27g</span>
-                </li>
-                <li class="nutrition">
-                  <span class="carbs">Carbs: </span>
-                  <span class="carbs-value nutrition-value">8g</span>
-                </li>
-                <li class="nutrition">
-                  <span class="fat">Fat: </span>
-                  <span class="fat-value nutrition-value">42g</span>
-                </li>
-              </ul>
+
+            <div class="bottom-side">
+              <div class="left-bottom-side">
+                <h2 class="ingredients-heading">Ingredients</h2>
+                <ul class="ingredients-list">
+                  <li class="ingredient">
+                    <span class="ingredient-value">3</span>
+                    <span class="ingredients-name">Eggs</span>
+                  </li>
+                  <li class="ingredient">
+                    <span class="ingredient-value">3</span>
+                    <span class="ingredients-name">Bacon Slices</span>
+                  </li>
+                  <li class="ingredient">
+                    <span class="ingredient-value">200g</span>
+                    <span class="ingredients-name"
+                      >Chopped Romaine Lettuce</span
+                    >
+                  </li>
+                  <li class="ingredient">
+                    <span class="ingredient-value">280g</span>
+                    <span class="ingredients-name">Diced Cooked Chicken</span>
+                  </li>
+                  <li class="ingredient">
+                    <span class="ingredient-value">150g</span>
+                    <span class="ingredients-name"
+                      >Fresh Cherry Tomatoes Halved</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="right-bottom-side">
+                <h2 class="recipe-nutrition-heading">Nutrition</h2>
+                <ul class="nutritions-list">
+                  <li class="nutrition">
+                    <span class="calories">Calories: </span>
+                    <span class="calories-value nutrition-value">521 kcal</span>
+                  </li>
+                  <li class="nutrition">
+                    <span class="protein">Protein: </span>
+                    <span class="protein-value nutrition-value">27g</span>
+                  </li>
+                  <li class="nutrition">
+                    <span class="carbs">Carbs: </span>
+                    <span class="carbs-value nutrition-value">8g</span>
+                  </li>
+                  <li class="nutrition">
+                    <span class="fat">Fat: </span>
+                    <span class="fat-value nutrition-value">42g</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="button">
+              <p class="full-recipe">Full Recipe</p>
             </div>
           </div>
-          <div class="button">
-            <p class="full-recipe">Full Recipe</p>
+        </section>
+      </div>
+      <div class="whole--mobile-menu hidden">
+        <div class="mobile-menu--display"></div>
+        <div class="mobile-menu">
+          <div class="nutrition-mobile-menu  mobile-menu--type">
+            <img src="./img/nutrition-img.svg" class="logo-mobile-menu"></img>
+            <p class="heading-mobile-menu">Nutrition</p>
+          </div>
+          <div class="dietType-mobile-menu mobile-menu--type">
+            <img src="./img/diet-type.svg" class="logo-mobile-menu"></img>
+            <p class="heading-mobile-menu">Diet Type</p>
+          </div>
+          <div class="mealType-mobile-menu mobile-menu--type">
+            <img src="./img/meal-type.svg" class="logo-mobile-menu"></img>
+            <p class="heading-mobile-menu">Meal Type</p>
           </div>
         </div>
-      </section>
-
-      <div class="buttons">
-        <button class="previous--button">Previous</button>
-        <button class="next--button">Next</button>
       </div>
     </main>
     <script async defer src="https://buttons.github.io/buttons.js"></script>

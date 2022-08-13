@@ -9,9 +9,6 @@ const CalorieSlider = () => {
     input.addEventListener('input', e => {
       let minVal = parseInt(rangeInput[0].value);
       let maxVal = parseInt(rangeInput[1].value);
-
-      console.log(maxVal);
-
       if (maxVal - minVal < valueGap) {
         if (e.target.className === 'range-min') {
           rangeInput[0].value = maxVal - valueGap;
