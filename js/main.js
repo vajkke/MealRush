@@ -1,5 +1,6 @@
 import DesktopSidebar from './App/Sidebar/DesktopSidebar.js';
 import MobileSidebar from './App/Sidebar/MobileSidebar.js';
+import SearchBar from './App/SearchBar/SearchBar.js';
 
 window.addEventListener('load', () => {
   if (window.innerWidth <= 890) {
@@ -16,3 +17,5 @@ window.addEventListener('resize', () => {
     DesktopSidebar();
   }
 });
+
+SearchBar();
