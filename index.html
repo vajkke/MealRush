@@ -29,10 +29,7 @@
         <form class="search-bar--form">
         <input type="text" class="search-bar" placeholder="Search Recipe" />
       </form>
-        <p class="recipe-matched-text">
-
-          Search some recipes
-        </p>
+        <p class="recipe-matched-text"></p>
         <select name="sorter" class="sort">
           <option>Sort</option>
           <option value="low-to-high--calories">Calories: Low to High</option>
@@ -49,7 +46,13 @@
       <div class="sidebar-and-display">
         <nav class="sidebar"></nav>
 
-        <section class="recipe-display"></section>
+        <section class="recipe-display">
+          <div class="illustration-container">
+            <img src="./img/searchRecipe.png" class="illustration-img">
+            <p class="illustration-text">Find some recipes</p>
+          </div>
+          <img src="./img/loaderUnlimited.gif" class="loader">
+        </section>
       </div>
     </main>
     <div class="whole--mobile-menu hidden">
