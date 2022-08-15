@@ -1,5 +1,6 @@
 import { DietTypeSelects, MealTypeSelects } from '../TypeSelects/TypeSelect.js';
 import Slider from '../Sliders/Slider.js';
+import DefaultValues from '../DefaultValues/DefaultValues.js';
 
 const sidebarElement = document.querySelector('.sidebar');
 
@@ -182,6 +183,7 @@ const sidebarContentHTML = `          <div class="sidebar-content">
 
 const DesktopSidebar = () => {
   sidebarElement.innerHTML = sidebarContentHTML;
+  DefaultValues();
   DietTypeSelects();
   MealTypeSelects();
   Slider();

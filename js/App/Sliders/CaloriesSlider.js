@@ -1,9 +1,10 @@
 const CalorieSlider = () => {
   const rangeInput = document.querySelectorAll('.calories-range input');
   const range = document.querySelector('.calories--slider .calories--progress');
-  let valueGap = 10;
   const maxValueDisplay = document.querySelector('.calories--max-value');
   const minValueDisplay = document.querySelector('.calories--min-value');
+
+  let valueGap = 10;
 
   rangeInput.forEach(input => {
     input.addEventListener('input', e => {

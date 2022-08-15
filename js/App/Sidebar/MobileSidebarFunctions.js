@@ -1,5 +1,6 @@
 import { MealTypeSelects, DietTypeSelects } from '../TypeSelects/TypeSelect.js';
 import Slider from '../Sliders/Slider.js';
+import DefaultValues from '../DefaultValues/DefaultValues.js';
 
 // Buttons
 
@@ -208,6 +209,7 @@ const nutritionActive = () => {
   activeMobileIconMeal = false;
   activeMobileIconDiet = false;
   Slider();
+  DefaultValues();
 };
 
 const dietTypeActive = () => {
