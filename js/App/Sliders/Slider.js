@@ -5,6 +5,7 @@ import FatSlider from './FatSlider.js';
 
 const Slider = () => {
   CaloriesSlider();
+  CaloriesSlider();
   ProteinSlider();
   CarbsSlider();
   FatSlider();
