@@ -2,6 +2,7 @@ import PageView from '../Display/PageView.js';
 import { recipesData } from '../Display/APIFetch.js';
 let recipeArray = [];
 let mealTypeOptions = [];
+let dietTypeOptions = [];
 
 const MealTypeSelects = () => {
   const activeEffect = `background: #A8DADC; color: #F7F7F7; transition: 300ms;`;
@@ -78,7 +79,7 @@ const MealTypeSelects = () => {
             recipeArray.push(recipe);
           }
         });
-        PageView(recipeArray);
+        PageView(recipeArray, mealTypeOptions, dietTypeOptions);
       } else if (
         option.getAttribute('data-active') === 'no' &&
         mealNoPref.getAttribute('data-active') === 'no'
@@ -92,7 +93,7 @@ const MealTypeSelects = () => {
             recipeArray.push(recipe);
           }
         });
-        PageView(recipeArray);
+        PageView(recipeArray, mealTypeOptions, dietTypeOptions);
       }
     });
   });
@@ -117,7 +118,7 @@ const MealTypeSelects = () => {
           recipeArray.push(recipe);
         }
       });
-      PageView(recipeArray);
+      PageView(recipeArray, mealTypeOptions, dietTypeOptions);
     } else {
       mealTypeOptions = [];
       PageView(mealTypeOptions);
