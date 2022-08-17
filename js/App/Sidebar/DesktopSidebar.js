@@ -1,6 +1,5 @@
 import { DietTypeSelects, MealTypeSelects } from '../TypeSelects/TypeSelect.js';
 import Slider from '../Sliders/Slider.js';
-import DefaultValues from '../DefaultValues/DefaultValues.js';
 
 const sidebarElement = document.querySelector('.sidebar');
 
@@ -133,20 +132,20 @@ const sidebarContentHTML = `          <div class="sidebar-content">
   </p>
   <div class="type--options">
     <ul class="left-side--options">
-      <li data-active="no" class="diet-option option">
+      <li data-active="no" class="diet-option option vegetarian-option">
         🥝 Vegetarian
       </li>
-      <li data-active="no" class="diet-option option">
+      <li data-active="no" class="diet-option option glutenfree-option">
         🆓 Gluten Free
       </li>
-      <li data-active="no" class="diet-option option">
+      <li data-active="no" class="diet-option option pescetarian-option">
         🐟 Pescetarian
       </li>
     </ul>
     <ul class="right-side--options">
-      <li data-active="no" class="diet-option option">🥗 Vegan</li>
-      <li data-active="no" class="diet-option option">🔥 Keto</li>
-      <li data-active="no" class="diet-option option">🥚 Paleo</li>
+      <li data-active="no" class="diet-option option vegan-option">🥗 Vegan</li>
+      <li data-active="no" class="diet-option option keto-option">🔥 Keto</li>
+      <li data-active="no" class="diet-option option paleo-option">🥚 Paleo</li>
     </ul>
   </div>
 </div>
@@ -158,22 +157,22 @@ const sidebarContentHTML = `          <div class="sidebar-content">
   </p>
   <div class="type--options">
     <ul class="left-side--options">
-      <li data-active="no" class="meal-option option">
+      <li data-active="no" class="meal-option option breakfast-option">
         🍳 Breakfast
       </li>
-      <li data-active="no" class="meal-option option">🥘 Lunch</li>
-      <li data-active="no" class="meal-option option">🍚 Dinner</li>
-      <li data-active="no" class="meal-option option">🍿 Snack</li>
+      <li data-active="no" class="meal-option option lunch-option">🥘 Lunch</li>
+      <li data-active="no" class="meal-option option dinner-option">🍚 Dinner</li>
+      <li data-active="no" class="meal-option option snacks-option">🍿 Snacks</li>
     </ul>
     <ul class="right-side--options">
-      <li data-active="no" class="meal-option option">
+      <li data-active="no" class="meal-option option dessert-option">
         🍰 Dessert
       </li>
-      <li data-active="no" class="meal-option option">
+      <li data-active="no" class="meal-option option appetizer-option">
         🍲 Appetizer
       </li>
-      <li data-active="no" class="meal-option option">🥗 Salad</li>
-      <li data-active="no" class="meal-option option">
+      <li data-active="no" class="meal-option option salad-option">🥗 Salad</li>
+      <li data-active="no" class="meal-option option smoothie-option">
         🥛 Smoothie
       </li>
     </ul>
@@ -183,7 +182,6 @@ const sidebarContentHTML = `          <div class="sidebar-content">
 
 const DesktopSidebar = () => {
   sidebarElement.innerHTML = sidebarContentHTML;
-  DefaultValues();
   DietTypeSelects();
   MealTypeSelects();
   Slider();

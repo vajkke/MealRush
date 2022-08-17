@@ -1,4 +1,9 @@
-const DietTypeSelects = () => {
+import PageView from '../Display/PageView.js';
+import { recipesData } from '../Display/APIFetch.js';
+let recipeArray = [];
+let dietTypeOptions = [];
+
+const DietTypeSelects = e => {
   const dietOptions = document.querySelectorAll('.diet-option');
   const dietOptionsArray = Array.from(dietOptions);
   const dietNoPref = document.querySelector('.diet-noPref--option');
@@ -6,6 +11,7 @@ const DietTypeSelects = () => {
   const activeEffect = `background: #A8DADC; color: #F7F7F7; transition: 300ms;`;
   const deactiveEffect = `background: transparent; color: #000; transition: 300ms;`;
 
+  // ANIMATION
   dietOptionsArray.forEach(option => {
     option.addEventListener('click', () => {
       if (option.getAttribute('data-active') === 'no') {
@@ -49,6 +55,71 @@ const DietTypeSelects = () => {
         option.style.cssText = deactiveEffect;
         option.setAttribute('data-active', 'no');
       });
+    }
+  });
+
+  // FUNCTIONS
+
+  dietOptionsArray.forEach(option => {
+    let dietOption = option
+      .getAttribute('class')
+      .split(' ')
+      .pop()
+      .split('-')
+      .shift();
+    option.addEventListener('click', () => {
+      if (option.getAttribute('data-active') === 'yes') {
+        recipeArray = [];
+        dietTypeOptions.push(dietOption);
+        recipesData.forEach(recipe => {
+          const recipeDietTypes = recipe.dietType;
+          if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+            recipeArray.push(recipe);
+          }
+        });
+        PageView(recipeArray);
+      } else if (
+        option.getAttribute('data-active') === 'no' &&
+        dietNoPref.getAttribute('data-active') === 'no'
+      ) {
+        recipeArray = [];
+        let filteredArray = dietTypeOptions.filter(diet => diet !== dietOption);
+        dietTypeOptions = filteredArray;
+        recipesData.forEach(recipe => {
+          const recipeDietTypes = recipe.dietType;
+          if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+            recipeArray.push(recipe);
+          }
+        });
+        PageView(recipeArray);
+      }
+    });
+  });
+
+  dietNoPref.addEventListener('click', () => {
+    recipeArray = [];
+    dietTypeOptions = [];
+    let dietOption;
+    if (dietNoPref.getAttribute('data-active') === 'yes') {
+      dietOptionsArray.forEach(option => {
+        dietOption = option
+          .getAttribute('class')
+          .split(' ')
+          .pop()
+          .split('-')
+          .shift();
+        dietTypeOptions.push(dietOption);
+      });
+      recipesData.forEach(recipe => {
+        const recipeDietTypes = recipe.dietType;
+        if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+          recipeArray.push(recipe);
+        }
+      });
+      PageView(recipeArray);
+    } else {
+      dietTypeOptions = [];
+      PageView(recipeArray);
     }
   });
 };
