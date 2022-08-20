@@ -3,6 +3,7 @@ import { recipesData } from '../Display/APIFetch.js';
 let recipeArray = [];
 let dietTypeOptions = [];
 let mealTypeOptions = [];
+let removedDietTypeOptions = [];
 
 const DietTypeSelects = e => {
   const dietOptions = document.querySelectorAll('.diet-option');
@@ -84,6 +85,7 @@ const DietTypeSelects = e => {
         dietNoPref.getAttribute('data-active') === 'no'
       ) {
         recipeArray = [];
+        removedDietTypeOptions.push(dietOption);
         let filteredArray = dietTypeOptions.filter(diet => diet !== dietOption);
         dietTypeOptions = filteredArray;
         recipesData.forEach(recipe => {
@@ -92,7 +94,12 @@ const DietTypeSelects = e => {
             recipeArray.push(recipe);
           }
         });
-        PageView(recipeArray, mealTypeOptions, dietTypeOptions);
+        PageView(
+          recipeArray,
+          mealTypeOptions,
+          dietTypeOptions,
+          removedDietTypeOptions
+        );
       }
     });
   });

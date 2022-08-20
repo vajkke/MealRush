@@ -3,6 +3,7 @@ import { recipesData } from '../Display/APIFetch.js';
 let recipeArray = [];
 let mealTypeOptions = [];
 let dietTypeOptions = [];
+let removedMealTypeOptions = [];
 
 const MealTypeSelects = () => {
   const activeEffect = `background: #A8DADC; color: #F7F7F7; transition: 300ms;`;
