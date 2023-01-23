@@ -1,12 +1,12 @@
-import { MealTypeSelects, DietTypeSelects } from '../TypeSelects/TypeSelect.js';
-import Slider from '../Sliders/Slider.js';
+import { MealTypeSelects, DietTypeSelects } from "../TypeSelects/TypeSelect.js";
+import Slider from "../Sliders/Slider.js";
 
 // Buttons
 
-const nutritionMobileBtn = document.querySelector('.nutrition-mobile-menu ');
-const dietTypeMobileBtn = document.querySelector('.dietType-mobile-menu ');
-const mealTypeMobileBtn = document.querySelector('.mealType-mobile-menu ');
-const mobileMenuDisplay = document.querySelector('.mobile-menu--display');
+const nutritionMobileBtn = document.querySelector(".nutrition-mobile-menu ");
+const dietTypeMobileBtn = document.querySelector(".dietType-mobile-menu ");
+const mealTypeMobileBtn = document.querySelector(".mealType-mobile-menu ");
+const mobileMenuDisplay = document.querySelector(".mobile-menu--display");
 
 // HTML CONTENT
 
@@ -192,14 +192,14 @@ const mealTypeHTML = `
 
 const mobileIconActiveStyle = `opacity: 0.75; box-shadow: 5px 0px 10px 0px #aaa;`;
 const mobileIconDeactiveStyle = `opacity: ''; box-shadow: ''`;
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector(".overlay");
 
 let activeMobileIconNutrition = false;
 let activeMobileIconMeal = false;
 let activeMobileIconDiet = false;
 
 const nutritionActive = () => {
-  overlay.classList.remove('hidden');
+  overlay.classList.remove("hidden");
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   nutritionMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -211,7 +211,7 @@ const nutritionActive = () => {
 };
 
 const dietTypeActive = () => {
-  overlay.classList.remove('hidden');
+  overlay.classList.remove("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -223,7 +223,7 @@ const dietTypeActive = () => {
 };
 
 const mealTypeActive = () => {
-  overlay.classList.remove('hidden');
+  overlay.classList.remove("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -235,17 +235,17 @@ const mealTypeActive = () => {
 };
 
 const mobileDisplayDeactive = () => {
-  overlay.classList.add('hidden');
+  overlay.classList.add("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
-  mobileMenuDisplay.innerHTML = '';
+  mobileMenuDisplay.innerHTML = "";
 };
 
 // FUNCTION //
 
 const MobileFunctions = () => {
-  nutritionMobileBtn.addEventListener('click', () => {
+  nutritionMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconNutrition) {
       nutritionActive();
     } else if (activeMobileIconNutrition) {
@@ -254,7 +254,7 @@ const MobileFunctions = () => {
     }
   });
 
-  dietTypeMobileBtn.addEventListener('click', () => {
+  dietTypeMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconDiet) {
       dietTypeActive();
     } else if (activeMobileIconDiet) {
@@ -263,7 +263,7 @@ const MobileFunctions = () => {
     }
   });
 
-  mealTypeMobileBtn.addEventListener('click', () => {
+  mealTypeMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconMeal) {
       mealTypeActive();
     } else if (activeMobileIconMeal) {
@@ -272,7 +272,7 @@ const MobileFunctions = () => {
     }
   });
 
-  overlay.addEventListener('click', () => {
+  overlay.addEventListener("click", () => {
     mobileDisplayDeactive();
   });
 };

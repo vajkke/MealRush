@@ -1,17 +1,17 @@
-import RecipeView from './RecipeView.js';
+import RecipeView from "./RecipeView.js";
+import SliderRecipeView from "./SliderRecipesView.js";
+
 let recipeArray = [];
 let recipesSetArray = [];
 let recipesDisplayArray = [];
 let tempRecipeArray = [];
-
-let removedRecipeArray = [];
 
 let mealTypeArray = [];
 let mealTypeSetArray = [];
 let dietTypeArray = [];
 let dietTypeSetArray = [];
 
-const PageView = (recipes, mealTypes, dietTypes, removedDietTypeOptions) => {
+const PageView = (recipes, mealTypes, dietTypes, deletedType) => {
   recipeArray.push(...recipes);
   recipesSetArray = [...new Set(recipeArray)];
 
@@ -20,47 +20,57 @@ const PageView = (recipes, mealTypes, dietTypes, removedDietTypeOptions) => {
   dietTypeArray.push(...dietTypes);
   dietTypeSetArray = [...new Set(dietTypeArray)];
 
-  if (
-    removedDietTypeOptions &&
-    dietTypeArray.some(diet => removedDietTypeOptions.includes(diet))
-  ) {
-    dietTypeArray = dietTypeArray.filter(
-      diet => !removedDietTypeOptions.includes(diet)
-    );
-    dietTypeSetArray = dietTypeSetArray.filter(
-      diet => !removedDietTypeOptions.includes(diet)
-    );
+  if (deletedType) {
+    if (dietTypeArray.includes(deletedType)) {
+      dietTypeArray = dietTypeArray.filter((item) => item !== deletedType);
+      dietTypeSetArray = dietTypeSetArray.filter(
+        (item) => item !== deletedType
+      );
+    }
+    if (mealTypeArray.includes(deletedType)) {
+      mealTypeArray = mealTypeArray.filter((item) => item !== deletedType);
+      mealTypeSetArray = mealTypeSetArray.filter(
+        (item) => item !== deletedType
+      );
+    }
   }
 
-  // console.log(removedDietTypeOptions);
-  // console.log(recipeArray);
-  // console.log(recipesSetArray);
-  // console.log(mealTypeArray, dietTypeArray);
-  // console.log(mealTypeSetArray, dietTypeSetArray);
-
   if (mealTypeSetArray.length > 0 && dietTypeSetArray.length > 0) {
-    recipesSetArray.forEach(recipe => {
+    tempRecipeArray = [];
+    recipesSetArray.forEach((recipe) => {
       if (
-        recipe.dietType.some(diet => dietTypeSetArray.includes(diet)) &&
-        recipe.mealType.some(meal => mealTypeSetArray.includes(meal))
+        recipe.dietType.some((diet) => dietTypeSetArray.includes(diet)) &&
+        recipe.mealType.some((meal) => mealTypeSetArray.includes(meal))
       ) {
         tempRecipeArray.push(recipe);
         recipesDisplayArray = [...new Set(tempRecipeArray)];
       }
     });
     RecipeView(recipesDisplayArray);
-  } else if (removedDietTypeOptions) {
-    recipesSetArray.forEach(recipe => {
-      if (
-        recipe.dietType.some(diet => !removedDietTypeOptions.includes(diet)) &&
-        recipe.mealType.some(meal => mealTypeSetArray.includes(meal))
-      ) {
-        removedRecipeArray.push(recipe);
+    SliderRecipeView(recipesDisplayArray);
+  } else if (mealTypeSetArray.length > 0 && deletedType) {
+    recipesSetArray.forEach((recipe) => {
+      if (recipe.mealType.some((meal) => mealTypeSetArray.includes(meal))) {
+        tempRecipeArray.push(recipe);
+        recipesDisplayArray = [...new Set(tempRecipeArray)];
       }
     });
-    RecipeView(removedRecipeArray);
+    RecipeView(recipesDisplayArray);
+    SliderRecipeView(recipesDisplayArray);
+  } else if (dietTypeSetArray.length > 0 && deletedType) {
+    recipesSetArray.forEach((recipe) => {
+      if (recipe.dietType.some((diet) => dietTypeSetArray.includes(diet))) {
+        tempRecipeArray.push(recipe);
+        recipesDisplayArray = [...new Set(tempRecipeArray)];
+      }
+    });
+    RecipeView(recipesDisplayArray);
+  } else if (dietTypeSetArray.length === 0 && mealTypeSetArray.length === 0) {
+    recipeArray = [];
+    RecipeView(recipeArray);
   } else {
     RecipeView(recipesSetArray);
+    SliderRecipeView(recipesSetArray);
   }
 };
 

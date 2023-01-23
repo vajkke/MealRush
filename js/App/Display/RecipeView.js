@@ -1,11 +1,11 @@
-const recipeDisplay = document.querySelector('.recipe-display');
-const recipeMatchedContainer = document.querySelector('.recipe-matched-text');
-const illustration = document.querySelector('.illustration-container');
-const searchBar = document.querySelector('.search-bar');
-const loader = document.querySelector('.loader');
+const recipeDisplay = document.querySelector(".recipe-display");
+const recipeMatchedContainer = document.querySelector(".recipe-matched-text");
+const illustration = document.querySelector(".illustration-container");
+const searchBar = document.querySelector(".search-bar");
+const loader = document.querySelector(".loader");
 
-const RecipeView = recipeArray => {
-  searchBar.value = '';
+const RecipeView = (recipeArray) => {
+  searchBar.value = "";
   const matchedHTML = `<p class="recipe-matched-text">We've found 
                        <span class="recipe-matched-number">${recipeArray.length}</span> recipes
                        </p> `;
@@ -13,19 +13,19 @@ const RecipeView = recipeArray => {
   const noMatchIllustration = `<img src="../../../img/noResult.png" class="illustration-img">
                                   <p class="illustration-text">Nothing to find here</p>`;
 
-  recipeMatchedContainer.innerHTML = '';
-  loader.style.display = 'flex';
+  recipeMatchedContainer.innerHTML = "";
+  loader.style.display = "flex";
   recipeDisplay.innerHTML = loader.outerHTML;
 
   setTimeout(() => {
     if (recipeArray.length < 1) {
       illustration.innerHTML = noMatchIllustration;
-      recipeMatchedContainer.innerHTML = '';
+      recipeMatchedContainer.innerHTML = "";
       recipeDisplay.innerHTML = illustration.outerHTML;
     } else {
       recipeMatchedContainer.innerHTML = matchedHTML;
       let recipeHTML = ``;
-      recipeArray.map(recipe => {
+      recipeArray.map((recipe) => {
         recipeHTML += recipeHTML = `
       <div class="recipe-container">
       <div class="top-side">
@@ -39,7 +39,7 @@ const RecipeView = recipeArray => {
               >${recipe.dietType[0]}</span
             >
             <span class="second-recipe--diet-type recipe--diet-type"
-              >${recipe.dietType[1] ? `& ${recipe.dietType[1]}` : ''}</span
+              >${recipe.dietType[1] ? `& ${recipe.dietType[1]}` : ""}</span
             >
           </h3>
         </div>

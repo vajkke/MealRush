@@ -1,126 +1,125 @@
-import PageView from '../Display/PageView.js';
-import { recipesData } from '../Display/APIFetch.js';
+import PageView from "../Display/PageView.js";
+import { recipesData } from "../Display/APIFetch.js";
 let recipeArray = [];
 let dietTypeOptions = [];
 let mealTypeOptions = [];
 let removedDietTypeOptions = [];
 
-const DietTypeSelects = e => {
-  const dietOptions = document.querySelectorAll('.diet-option');
+const DietTypeSelects = (e) => {
+  const dietOptions = document.querySelectorAll(".diet-option");
   const dietOptionsArray = Array.from(dietOptions);
-  const dietNoPref = document.querySelector('.diet-noPref--option');
+  const dietNoPref = document.querySelector(".diet-noPref--option");
 
   const activeEffect = `background: #A8DADC; color: #F7F7F7; transition: 300ms;`;
   const deactiveEffect = `background: transparent; color: #000; transition: 300ms;`;
 
   // ANIMATION
-  dietOptionsArray.forEach(option => {
-    option.addEventListener('click', () => {
-      if (option.getAttribute('data-active') === 'no') {
+  dietOptionsArray.forEach((option) => {
+    option.addEventListener("click", () => {
+      if (option.getAttribute("data-active") === "no") {
         option.style.cssText = activeEffect;
-        option.setAttribute('data-active', 'yes');
-        const doesItHAve = btn => btn.getAttribute('data-active') === 'yes';
+        option.setAttribute("data-active", "yes");
+        const doesItHAve = (btn) => btn.getAttribute("data-active") === "yes";
         if (dietOptionsArray.every(doesItHAve)) {
-          dietNoPref.setAttribute('data-active', 'yes');
+          dietNoPref.setAttribute("data-active", "yes");
           dietNoPref.style.cssText = activeEffect;
         }
       } else if (
-        option.getAttribute('data-active') === 'yes' &&
-        dietNoPref.getAttribute('data-active') === 'no'
+        option.getAttribute("data-active") === "yes" &&
+        dietNoPref.getAttribute("data-active") === "no"
       ) {
         option.style.cssText = deactiveEffect;
-        option.setAttribute('data-active', 'no');
+        option.setAttribute("data-active", "no");
       } else if (
-        option.getAttribute('data-active') === 'yes' &&
-        dietNoPref.getAttribute('data-active') === 'yes'
+        option.getAttribute("data-active") === "yes" &&
+        dietNoPref.getAttribute("data-active") === "yes"
       ) {
         option.style.cssText = deactiveEffect;
-        option.setAttribute('data-active', 'no');
-        dietNoPref.setAttribute('data-active', 'no');
+        option.setAttribute("data-active", "no");
+        dietNoPref.setAttribute("data-active", "no");
         dietNoPref.style.cssText = deactiveEffect;
       }
     });
   });
 
-  dietNoPref.addEventListener('click', () => {
-    if (dietNoPref.getAttribute('data-active') === 'no') {
-      dietNoPref.setAttribute('data-active', 'yes');
+  dietNoPref.addEventListener("click", () => {
+    if (dietNoPref.getAttribute("data-active") === "no") {
+      dietNoPref.setAttribute("data-active", "yes");
       dietNoPref.style.cssText = activeEffect;
-      dietOptionsArray.forEach(option => {
+      dietOptionsArray.forEach((option) => {
         option.style.cssText = activeEffect;
-        option.setAttribute('data-active', 'yes');
+        option.setAttribute("data-active", "yes");
       });
     } else {
-      dietNoPref.setAttribute('data-active', 'no');
+      dietNoPref.setAttribute("data-active", "no");
       dietNoPref.style.cssText = deactiveEffect;
-      dietOptionsArray.forEach(option => {
+      dietOptionsArray.forEach((option) => {
         option.style.cssText = deactiveEffect;
-        option.setAttribute('data-active', 'no');
+        option.setAttribute("data-active", "no");
       });
     }
   });
 
   // FUNCTIONS
 
-  dietOptionsArray.forEach(option => {
+  dietOptionsArray.forEach((option) => {
     let dietOption = option
-      .getAttribute('class')
-      .split(' ')
+      .getAttribute("class")
+      .split(" ")
       .pop()
-      .split('-')
+      .split("-")
       .shift();
-    option.addEventListener('click', () => {
-      if (option.getAttribute('data-active') === 'yes') {
+    option.addEventListener("click", () => {
+      if (option.getAttribute("data-active") === "yes") {
         recipeArray = [];
         dietTypeOptions.push(dietOption);
-        recipesData.forEach(recipe => {
+        recipesData.forEach((recipe) => {
           const recipeDietTypes = recipe.dietType;
-          if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+          if (recipeDietTypes.some((diet) => dietTypeOptions.includes(diet))) {
             recipeArray.push(recipe);
           }
         });
         PageView(recipeArray, mealTypeOptions, dietTypeOptions);
-      } else if (
-        option.getAttribute('data-active') === 'no' &&
-        dietNoPref.getAttribute('data-active') === 'no'
+      }
+
+      if (
+        option.getAttribute("data-active") === "no" &&
+        dietNoPref.getAttribute("data-active") === "no"
       ) {
         recipeArray = [];
         removedDietTypeOptions.push(dietOption);
-        let filteredArray = dietTypeOptions.filter(diet => diet !== dietOption);
+        let filteredArray = dietTypeOptions.filter(
+          (diet) => diet !== dietOption
+        );
         dietTypeOptions = filteredArray;
-        recipesData.forEach(recipe => {
+        recipesData.forEach((recipe) => {
           const recipeDietTypes = recipe.dietType;
-          if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+          if (recipeDietTypes.some((diet) => dietTypeOptions.includes(diet))) {
             recipeArray.push(recipe);
           }
         });
-        PageView(
-          recipeArray,
-          mealTypeOptions,
-          dietTypeOptions,
-          removedDietTypeOptions
-        );
+        PageView(recipeArray, mealTypeOptions, dietTypeOptions, dietOption);
       }
     });
   });
 
-  dietNoPref.addEventListener('click', () => {
+  dietNoPref.addEventListener("click", () => {
     recipeArray = [];
     dietTypeOptions = [];
     let dietOption;
-    if (dietNoPref.getAttribute('data-active') === 'yes') {
-      dietOptionsArray.forEach(option => {
+    if (dietNoPref.getAttribute("data-active") === "yes") {
+      dietOptionsArray.forEach((option) => {
         dietOption = option
-          .getAttribute('class')
-          .split(' ')
+          .getAttribute("class")
+          .split(" ")
           .pop()
-          .split('-')
+          .split("-")
           .shift();
         dietTypeOptions.push(dietOption);
       });
-      recipesData.forEach(recipe => {
+      recipesData.forEach((recipe) => {
         const recipeDietTypes = recipe.dietType;
-        if (recipeDietTypes.some(diet => dietTypeOptions.includes(diet))) {
+        if (recipeDietTypes.some((diet) => dietTypeOptions.includes(diet))) {
           recipeArray.push(recipe);
         }
       });
