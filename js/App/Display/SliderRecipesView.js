@@ -21,10 +21,7 @@ const SliderRecipeView = (recipes) => {
   } else if (!recipes && recipeArray.length < 1) {
     // ako primam recepte iz slidera
     recipeArray.push(...recipesData);
-    console.log("slider se pomera");
   }
-
-  console.log(recipeArray);
 
   if (
     (recipeArray.length > 1 && minValCalories) ||
@@ -49,8 +46,6 @@ const SliderRecipeView = (recipes) => {
     );
     recipesDisplayArray = [...new Set(tempRecipeArray)];
     SearchButton(recipesDisplayArray);
-    console.log(recipesDisplayArray);
-    // DietTypeSelects(recipesDisplayArray);
   }
 };
 
