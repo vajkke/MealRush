@@ -1,11 +1,9 @@
 const recipeDisplay = document.querySelector(".recipe-display");
 const recipeMatchedContainer = document.querySelector(".recipe-matched-text");
 const illustration = document.querySelector(".illustration-container");
-const searchBar = document.querySelector(".search-bar");
 const loader = document.querySelector(".loader");
 
 const RecipeView = (recipeArray) => {
-  searchBar.value = "";
   const matchedHTML = `<p class="recipe-matched-text">We've found 
                        <span class="recipe-matched-number">${recipeArray.length}</span> recipes
                        </p> `;

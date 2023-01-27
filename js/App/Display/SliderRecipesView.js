@@ -3,18 +3,31 @@ import { minValProtein, maxValProtein } from "../Sliders/ProteinSlider.js";
 import { minValCarbs, maxValCarbs } from "../Sliders/CarbsSlider.js";
 import { minValFat, maxValFat } from "../Sliders/FatSlider.js";
 import RecipeView from "./RecipeView.js";
+import SearchButton from "./SearchButton.js";
+
+import { recipesData } from "../Display/APIFetch.js";
+import DietTypeSelects from "../TypeSelects/DietTypeSelects.js";
 
 let recipeArray = [];
+let sliderRecipeArray = [];
 let tempRecipeArray = [];
 let recipesDisplayArray = [];
 
 const SliderRecipeView = (recipes) => {
   if (recipes) {
+    recipeArray = [];
+    // ako primam recepte iz PageView
     recipeArray.push(...recipes);
+  } else if (!recipes && recipeArray.length < 1) {
+    // ako primam recepte iz slidera
+    recipeArray.push(...recipesData);
+    console.log("slider se pomera");
   }
 
+  console.log(recipeArray);
+
   if (
-    minValCalories ||
+    (recipeArray.length > 1 && minValCalories) ||
     maxValCalories ||
     minValProtein ||
     maxValProtein ||
@@ -35,7 +48,9 @@ const SliderRecipeView = (recipes) => {
         parseInt(recipe.nutrition[0].fat) <= maxValFat
     );
     recipesDisplayArray = [...new Set(tempRecipeArray)];
-    RecipeView(recipesDisplayArray);
+    SearchButton(recipesDisplayArray);
+    console.log(recipesDisplayArray);
+    // DietTypeSelects(recipesDisplayArray);
   }
 };
 

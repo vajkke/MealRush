@@ -1,8 +1,7 @@
-import DesktopSidebar from './App/Sidebar/DesktopSidebar.js';
-import MobileSidebar from './App/Sidebar/MobileSidebar.js';
-import SearchBar from './App/SearchBar/SearchBar.js';
+import DesktopSidebar from "./App/Sidebar/DesktopSidebar.js";
+import MobileSidebar from "./App/Sidebar/MobileSidebar.js";
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   if (window.innerWidth <= 890) {
     MobileSidebar();
   } else if (window.innerWidth >= 890) {
@@ -10,12 +9,10 @@ window.addEventListener('load', () => {
   }
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   if (window.innerWidth <= 890) {
     MobileSidebar();
   } else if (window.innerWidth >= 890) {
     DesktopSidebar();
   }
 });
-
-SearchBar();

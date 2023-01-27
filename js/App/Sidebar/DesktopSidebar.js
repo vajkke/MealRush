@@ -1,7 +1,7 @@
-import { DietTypeSelects, MealTypeSelects } from '../TypeSelects/TypeSelect.js';
-import Slider from '../Sliders/Slider.js';
+import { DietTypeSelects, MealTypeSelects } from "../TypeSelects/TypeSelect.js";
+import Slider from "../Sliders/Slider.js";
 
-const sidebarElement = document.querySelector('.sidebar');
+const sidebarElement = document.querySelector(".sidebar");
 
 const sidebarContentHTML = `          <div class="sidebar-content">
 <div class="nutrition--container">
@@ -127,9 +127,6 @@ const sidebarContentHTML = `          <div class="sidebar-content">
 </div>
 <div class="diet-type--container">
   <h3 class="type--heading">Diet Type</h3>
-  <p data-active="no" class="diet-noPref--option option">
-    💯 No Preference
-  </p>
   <div class="type--options">
     <ul class="left-side--options">
       <li data-active="no" class="diet-option option vegetarian-option">
@@ -152,9 +149,6 @@ const sidebarContentHTML = `          <div class="sidebar-content">
 
 <div class="meal-type--container">
   <h3 class="type--heading">Meal Type</h3>
-  <p data-active="no" class="meal-noPref--option option">
-    💯 No Preference
-  </p>
   <div class="type--options">
     <ul class="left-side--options">
       <li data-active="no" class="meal-option option breakfast-option">

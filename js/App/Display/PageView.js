@@ -46,7 +46,6 @@ const PageView = (recipes, mealTypes, dietTypes, deletedType) => {
         recipesDisplayArray = [...new Set(tempRecipeArray)];
       }
     });
-    RecipeView(recipesDisplayArray);
     SliderRecipeView(recipesDisplayArray);
   } else if (mealTypeSetArray.length > 0 && deletedType) {
     recipesSetArray.forEach((recipe) => {
@@ -55,7 +54,6 @@ const PageView = (recipes, mealTypes, dietTypes, deletedType) => {
         recipesDisplayArray = [...new Set(tempRecipeArray)];
       }
     });
-    RecipeView(recipesDisplayArray);
     SliderRecipeView(recipesDisplayArray);
   } else if (dietTypeSetArray.length > 0 && deletedType) {
     recipesSetArray.forEach((recipe) => {
@@ -64,12 +62,11 @@ const PageView = (recipes, mealTypes, dietTypes, deletedType) => {
         recipesDisplayArray = [...new Set(tempRecipeArray)];
       }
     });
-    RecipeView(recipesDisplayArray);
+    SliderRecipeView(recipesDisplayArray);
   } else if (dietTypeSetArray.length === 0 && mealTypeSetArray.length === 0) {
     recipeArray = [];
-    RecipeView(recipeArray);
+    SliderRecipeView(recipeArray);
   } else {
-    RecipeView(recipesSetArray);
     SliderRecipeView(recipesSetArray);
   }
 };

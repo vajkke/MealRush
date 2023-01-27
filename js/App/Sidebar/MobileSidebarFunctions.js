@@ -137,9 +137,6 @@ const nutritionHTML = `
 const dietTypeHTML = `
 <div class="diet-type--container">
 <h3 class="type--heading">Diet Type</h3>
-<p data-active="no" class="diet-noPref--option option">
-  No Preference
-</p>
 <div class="type--options">
   <ul class="left-side--options">
     <li data-active="no" class="diet-option option">
@@ -164,9 +161,6 @@ const dietTypeHTML = `
 const mealTypeHTML = `
 <div class="meal-type--container">
 <h3 class="type--heading">Meal Type</h3>
-<p data-active="no" class="meal-noPref--option option">
-  No Preference
-</p>
 <div class="type--options">
   <ul class="left-side--options">
     <li data-active="no" class="meal-option option">
