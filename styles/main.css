@@ -86,7 +86,7 @@ main {
   justify-content: center;
   font-weight: 700;
   color: #1d3557;
-  margin-left: 3rem;
+  margin-left: 3.2rem;
   border-color: #1d3557;
   background-color: #b3c8e6;
 }
@@ -143,9 +143,10 @@ main {
     flex-direction: column;
     justify-content: center;
   }
-  .search-bar {
+  .search-btn {
     margin-bottom: 1rem;
     margin-left: 0;
+    z-index: 6;
   }
   .sort {
     margin: 0;

@@ -1,4 +1,5 @@
 import RecipeView from "./RecipeView.js";
+import SortingFunction from "../Sort/SortingFunction.js";
 
 let recipeLength;
 
@@ -9,6 +10,7 @@ const SearchButton = (recipes) => {
 
   searchBtn.addEventListener("click", () => {
     if (recipeLength === recipes.length) {
+      SortingFunction(recipes);
       RecipeView(recipes);
     }
   });
