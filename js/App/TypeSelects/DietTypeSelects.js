@@ -5,7 +5,7 @@ let dietTypeOptions = [];
 let mealTypeOptions = [];
 let removedDietTypeOptions = [];
 
-const DietTypeSelects = (recipes) => {
+const DietTypeSelects = () => {
   const dietOptions = document.querySelectorAll(".diet-option");
   const dietOptionsArray = Array.from(dietOptions);
 
