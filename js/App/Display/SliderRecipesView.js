@@ -5,7 +5,7 @@ import { minValFat, maxValFat } from "../Sliders/FatSlider.js";
 
 import SearchButton from "./SearchButton.js";
 
-import { recipesData } from "../Display/APIFestch.js";
+import { recipesData } from "./APIFetch.js";
 
 let recipeArray = [];
 let sliderRecipeArray = [];
