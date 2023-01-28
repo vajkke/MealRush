@@ -18,21 +18,51 @@ const SliderRecipeView = (recipes) => {
     recipeArray = [];
     // ako primam recepte iz PageView
     recipeArray.push(...recipes);
-  } else if (!recipes && recipeArray.length < 1) {
+  } else if (!recipes) {
     // ako primam recepte iz slidera
-    recipeArray.push(...recipesData);
+    // recipeArray.push(...recipesData);
+    sliderRecipeArray.push(...recipesData);
   }
 
   if (
-    (recipeArray.length > 1 && minValCalories) ||
-    maxValCalories ||
-    minValProtein ||
-    maxValProtein ||
-    minValCarbs ||
-    maxValCarbs ||
-    minValFat ||
-    maxValFat
+    sliderRecipeArray.length > 1 &&
+    recipeArray.length < 1 &&
+    (minValCalories ||
+      maxValCalories ||
+      minValProtein ||
+      maxValProtein ||
+      minValCarbs ||
+      maxValCarbs ||
+      minValFat ||
+      maxValFat)
   ) {
+    tempRecipeArray = sliderRecipeArray.filter(
+      (recipe) =>
+        +recipe.nutrition[0].calories >= minValCalories &&
+        +recipe.nutrition[0].calories <= maxValCalories &&
+        parseInt(recipe.nutrition[0].protein) >= minValProtein &&
+        parseInt(recipe.nutrition[0].protein) <= maxValProtein &&
+        parseInt(recipe.nutrition[0].carbs) >= minValCarbs &&
+        parseInt(recipe.nutrition[0].carbs) <= maxValCarbs &&
+        parseInt(recipe.nutrition[0].fat) >= minValFat &&
+        parseInt(recipe.nutrition[0].fat) <= maxValFat
+    );
+    recipesDisplayArray = [...new Set(tempRecipeArray)];
+    SearchButton(recipesDisplayArray);
+  }
+
+  if (
+    recipeArray.length > 1 &&
+    (minValCalories ||
+      maxValCalories ||
+      minValProtein ||
+      maxValProtein ||
+      minValCarbs ||
+      maxValCarbs ||
+      minValFat ||
+      maxValFat)
+  ) {
+    console.log(recipeArray.length);
     tempRecipeArray = recipeArray.filter(
       (recipe) =>
         +recipe.nutrition[0].calories >= minValCalories &&

@@ -5,6 +5,10 @@ let recipeArray = [];
 const SortingFunction = (recipes) => {
   const sortElement = document.querySelector(".sort");
 
+  let defaultOption = sortElement.options[0];
+
+  sortElement.selectedIndex = defaultOption;
+
   const caloriesLowToHigh = sortElement.options[1].value;
   const caloriesHighToLow = sortElement.options[2].value;
   const proteinLowToHigh = sortElement.options[3].value;
