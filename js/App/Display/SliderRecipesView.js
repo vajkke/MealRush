@@ -20,7 +20,6 @@ const SliderRecipeView = (recipes) => {
     recipeArray.push(...recipes);
   } else if (!recipes) {
     // ako primam recepte iz slidera
-    // recipeArray.push(...recipesData);
     sliderRecipeArray.push(...recipesData);
   }
 
