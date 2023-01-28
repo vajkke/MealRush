@@ -62,7 +62,6 @@ const SliderRecipeView = (recipes) => {
       minValFat ||
       maxValFat)
   ) {
-    console.log(recipeArray.length);
     tempRecipeArray = recipeArray.filter(
       (recipe) =>
         +recipe.nutrition[0].calories >= minValCalories &&

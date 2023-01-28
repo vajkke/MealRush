@@ -136,49 +136,53 @@ const nutritionHTML = `
 
 const dietTypeHTML = `
 <div class="diet-type--container">
-<h3 class="type--heading">Diet Type</h3>
-<div class="type--options">
-  <ul class="left-side--options">
-    <li data-active="no" class="diet-option option">
-      🥝 Vegetarian
-    </li>
-    <li data-active="no" class="diet-option option">
-      🆓 Gluten Free
-    </li>
-    <li data-active="no" class="diet-option option">
-      🐟 Pescetarian
-    </li>
-  </ul>
-  <ul class="right-side--options">
-    <li data-active="no" class="diet-option option">🥗 Vegan</li>
-    <li data-active="no" class="diet-option option">🔥 Keto</li>
-    <li data-active="no" class="diet-option option">🥚 Paleo</li>
-  </ul>
-</div>
+  <h3 class="type--heading">Diet Type</h3>
+  <div class="type--options">
+    <ul class="left-side--options">
+      <li data-active="no" class="diet-option option vegetarian-option">
+        🥝 Vegetarian
+      </li>
+      <li data-active="no" class="diet-option option glutenfree-option">
+        🆓 Gluten Free
+      </li>
+      <li data-active="no" class="diet-option option pescetarian-option">
+        🐟 Pescetarian
+      </li>
+    </ul>
+    <ul class="right-side--options">
+      <li data-active="no" class="diet-option option vegan-option">🥗 Vegan</li>
+      <li data-active="no" class="diet-option option keto-option">🔥 Keto</li>
+      <li data-active="no" class="diet-option option paleo-option">🥚 Paleo</li>
+    </ul>
+  </div>
 </div>
 `;
 
 const mealTypeHTML = `
 <div class="meal-type--container">
-<h3 class="type--heading">Meal Type</h3>
-<div class="type--options">
-  <ul class="left-side--options">
-    <li data-active="no" class="meal-option option">
-      🍳 Breakfast
-    </li>
-    <li data-active="no" class="meal-option option">🥘 Lunch</li>
-    <li data-active="no" class="meal-option option">🍚 Dinner</li>
-    <li data-active="no" class="meal-option option">🍿 Snack</li>
-  </ul>
-  <ul class="right-side--options">
-    <li data-active="no" class="meal-option option">🍰 Dessert</li>
-    <li data-active="no" class="meal-option option">
-      🍲 Appetizer
-    </li>
-    <li data-active="no" class="meal-option option">🥗 Salad</li>
-    <li data-active="no" class="meal-option option">🥛 Smoothie</li>
-  </ul>
-</div>
+  <h3 class="type--heading">Meal Type</h3>
+  <div class="type--options">
+    <ul class="left-side--options">
+      <li data-active="no" class="meal-option option breakfast-option">
+        🍳 Breakfast
+      </li>
+      <li data-active="no" class="meal-option option lunch-option">🥘 Lunch</li>
+      <li data-active="no" class="meal-option option dinner-option">🍚 Dinner</li>
+      <li data-active="no" class="meal-option option snacks-option">🍿 Snacks</li>
+    </ul>
+    <ul class="right-side--options">
+      <li data-active="no" class="meal-option option dessert-option">
+        🍰 Dessert
+      </li>
+      <li data-active="no" class="meal-option option appetizer-option">
+        🍲 Appetizer
+      </li>
+      <li data-active="no" class="meal-option option salad-option">🥗 Salad</li>
+      <li data-active="no" class="meal-option option smoothie-option">
+        🥛 Smoothie
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
