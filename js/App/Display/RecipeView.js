@@ -8,7 +8,7 @@ const RecipeView = (recipeArray) => {
                        <span class="recipe-matched-number">${recipeArray.length}</span> recipes
                        </p> `;
 
-  const noMatchIllustration = `<img src="../../../img/noResult.png" class="illustration-img">
+  const noMatchIllustration = `<img src="./img/noResult.png" class="illustration-img">
                                   <p class="illustration-text">Nothing to find here</p>`;
 
   recipeMatchedContainer.innerHTML = "";
