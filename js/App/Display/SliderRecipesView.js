@@ -2,11 +2,10 @@ import { minValCalories, maxValCalories } from "../Sliders/CaloriesSlider.js";
 import { minValProtein, maxValProtein } from "../Sliders/ProteinSlider.js";
 import { minValCarbs, maxValCarbs } from "../Sliders/CarbsSlider.js";
 import { minValFat, maxValFat } from "../Sliders/FatSlider.js";
-import RecipeView from "./RecipeView.js";
+
 import SearchButton from "./SearchButton.js";
 
-import { recipesData } from "../Display/APIFetch.js";
-import DietTypeSelects from "../TypeSelects/DietTypeSelects.js";
+import { recipesData } from "../Display/APIFestch.js";
 
 let recipeArray = [];
 let sliderRecipeArray = [];
