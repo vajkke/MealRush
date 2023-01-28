@@ -10,8 +10,8 @@ const SearchButton = (recipes) => {
 
   searchBtn.addEventListener("click", () => {
     if (recipeLength === recipes.length) {
-      SortingFunction(recipes);
       RecipeView(recipes);
+      SortingFunction(recipes);
     }
   });
 };
