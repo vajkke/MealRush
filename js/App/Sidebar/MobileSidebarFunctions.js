@@ -243,7 +243,7 @@ const mobileDisplayDeactive = () => {
 // FUNCTION //
 
 const MobileFunctions = () => {
-  nutritionMobileBtn.addEventListener("touchstart", () => {
+  nutritionMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconNutrition) {
       nutritionActive();
     } else if (activeMobileIconNutrition) {
@@ -252,7 +252,7 @@ const MobileFunctions = () => {
     }
   });
 
-  dietTypeMobileBtn.addEventListener("touchstart", () => {
+  dietTypeMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconDiet) {
       dietTypeActive();
     } else if (activeMobileIconDiet) {
@@ -261,7 +261,7 @@ const MobileFunctions = () => {
     }
   });
 
-  mealTypeMobileBtn.addEventListener("touchstart", () => {
+  mealTypeMobileBtn.addEventListener("click", () => {
     if (!activeMobileIconMeal) {
       mealTypeActive();
     } else if (activeMobileIconMeal) {
@@ -270,7 +270,7 @@ const MobileFunctions = () => {
     }
   });
 
-  overlay.addEventListener("touchstart", () => {
+  overlay.addEventListener("click", () => {
     mobileDisplayDeactive();
   });
 };
