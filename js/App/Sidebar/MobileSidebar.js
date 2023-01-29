@@ -1,7 +1,8 @@
-import MobileFunctions from './MobileSidebarFunctions.js';
-const sidebarElement = document.querySelector('.sidebar');
+import { MobileFunctions } from "./MobileSidebarFunctions.js";
+const sidebarElement = document.querySelector(".sidebar");
+
 const MobileSidebar = () => {
-  sidebarElement.innerHTML = '';
+  sidebarElement.innerHTML = "";
   MobileFunctions();
 };
 

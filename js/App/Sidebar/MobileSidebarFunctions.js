@@ -7,6 +7,7 @@ const nutritionMobileBtn = document.querySelector(".nutrition-mobile-menu ");
 const dietTypeMobileBtn = document.querySelector(".dietType-mobile-menu ");
 const mealTypeMobileBtn = document.querySelector(".mealType-mobile-menu ");
 const mobileMenuDisplay = document.querySelector(".mobile-menu--display");
+const mobileSearchButton = document.querySelector(".search-btn--mobile");
 
 // HTML CONTENT
 
@@ -198,6 +199,7 @@ let activeMobileIconDiet = false;
 
 const nutritionActive = () => {
   overlay.classList.remove("hidden");
+  mobileSearchButton.classList.remove("hidden");
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   nutritionMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -210,6 +212,7 @@ const nutritionActive = () => {
 
 const dietTypeActive = () => {
   overlay.classList.remove("hidden");
+  mobileSearchButton.classList.remove("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -222,6 +225,7 @@ const dietTypeActive = () => {
 
 const mealTypeActive = () => {
   overlay.classList.remove("hidden");
+  mobileSearchButton.classList.remove("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconActiveStyle;
@@ -232,8 +236,9 @@ const mealTypeActive = () => {
   MealTypeSelects();
 };
 
-const mobileDisplayDeactive = () => {
+export const mobileDisplayDeactive = () => {
   overlay.classList.add("hidden");
+  mobileSearchButton.classList.add("hidden");
   nutritionMobileBtn.style.cssText = mobileIconDeactiveStyle;
   dietTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
   mealTypeMobileBtn.style.cssText = mobileIconDeactiveStyle;
@@ -242,7 +247,7 @@ const mobileDisplayDeactive = () => {
 
 // FUNCTION //
 
-const MobileFunctions = () => {
+export const MobileFunctions = () => {
   nutritionMobileBtn.addEventListener("touchstart", () => {
     if (!activeMobileIconNutrition) {
       nutritionActive();
@@ -274,5 +279,3 @@ const MobileFunctions = () => {
     mobileDisplayDeactive();
   });
 };
-
-export default MobileFunctions;
