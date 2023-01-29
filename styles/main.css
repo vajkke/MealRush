@@ -142,16 +142,17 @@ main {
   .navbar {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .search-btn {
     margin-bottom: 1rem;
     margin-left: 0;
     z-index: 6;
+    display: none;
   }
+
   .sort {
     margin: 0;
-    position: absolute;
-    bottom: 0%;
   }
 
   .search-btn:hover {
@@ -505,6 +506,22 @@ input[type="range"]::-moz-range-thumb {
 
 .whole--mobile-menu {
   display: none;
+}
+
+.search-btn--mobile {
+  width: 35%;
+  border: none;
+  background-color: #fff;
+  padding: 0.7rem 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #1d3557;
+  font-weight: 700;
+}
+
+.search-btn--mobile:hover {
+  background-color: #b3c8e6;
+  color: #ffff;
 }
 
 .hidden {
