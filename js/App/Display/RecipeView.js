@@ -119,9 +119,11 @@ const RecipeView = (recipeArray) => {
           </ul>
         </div>
       </div>
+      <a href="${recipe.link}" target="_blank" class="recipe--link">
       <div class="button">
-        <p class="full-recipe">Full Recipe</p>
+      <p class="full-recipe">Full Recipe</p>
       </div>
+      </a>
       </div>`;
 
         recipeDisplay.innerHTML = recipeHTML;
