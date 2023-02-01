@@ -34,12 +34,6 @@ body {
   margin-right: 4rem;
 }
 
-.about {
-  margin-right: 5rem;
-  color: #457b9d;
-  cursor: pointer;
-}
-
 @media (max-width: 590px) {
   .main-header {
     flex-direction: column;
@@ -49,9 +43,6 @@ body {
   .right-side {
     margin-top: 1rem;
     margin-right: 0;
-  }
-  .about {
-    margin-right: 2rem;
   }
 }
 
