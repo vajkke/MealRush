@@ -6,7 +6,7 @@ Unlock a world of flavor with MealRush recipe finder.
 [MealRush website](https://vajkke.github.io/MealRush/)
 
 
-![alt text](https://i.postimg.cc/sgXrbh82/mealrush.jpg)
+![alt text](https://i.postimg.cc/nLkZ5fYv/Screenshot-from-2023-02-01-21-02-02.png)
 
 
 
